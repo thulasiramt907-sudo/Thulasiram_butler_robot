@@ -1,0 +1,17 @@
+# Delivery Action
+# Used for long-running navigation tasks that can be cancelled mid-execution
+
+# GOAL: sent by client to start the task
+string order_id        # Unique order being executed
+int32  target_table    # Table number to deliver to (0 = going to kitchen)
+string destination     # Human-readable destination: kitchen / table_1 / home
+---
+# RESULT: sent when action completes or is cancelled
+bool   success         # True = delivery completed, False = failed or cancelled
+string final_state     # Final FSM state when action ended
+string message         # Summary of what happened
+---
+# FEEDBACK: sent periodically while action is running
+string current_state      # Current FSM state during execution
+string current_location   # Where the robot is right now
+float32 progress          # 0.0 to 1.0 completion estimate

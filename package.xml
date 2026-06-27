@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd"
+schematypens="http://www.w3.org/2001/XMLSchema"?>
+
+<package format="3">
+
+<name>butler_robot</name> <version>1.0.0</version>
+
+  <description>
+    ROS2 Humble Butler Robot for French Door Cafe.
+    Handles food delivery from kitchen to tables using Nav2,
+    state management, order queues, timeouts and cancellation.
+  </description>
+
+<maintainer email="your@email.com">Your Name</maintainer> <license>MIT</license>
+
+  <!-- Build tools -->
+
+<buildtool_depend>ament_cmake</buildtool_depend>
+<buildtool_depend>ament_cmake_python</buildtool_depend>
+
+  <!-- Interface generation -->
+
+<build_depend>rosidl_default_generators</build_depend>
+
+<exec_depend>rosidl_default_runtime</exec_depend>
+
+<member_of_group>rosidl_interface_packages</member_of_group>
+
+  <!-- Core ROS2 -->
+
+<depend>rclpy</depend> <depend>std_msgs</depend> <depend>geometry_msgs</depend> <depend>nav_msgs</depend> <depend>action_msgs</depend>
+
+  <!-- Navigation -->
+
+<depend>nav2_msgs</depend> <depend>nav2_bringup</depend>
+
+  <!-- TF -->
+
+<depend>tf2_ros</depend> <depend>tf2_geometry_msgs</depend>
+
+  <!-- Robot description -->
+
+<depend>robot_state_publisher</depend> <depend>joint_state_publisher</depend> <depend>xacro</depend>
+
+  <!-- Gazebo -->
+
+<depend>gazebo_ros</depend> <depend>gazebo_ros2_control</depend>
+
+  <!-- Python launch support -->
+
+<exec_depend>ament_index_python</exec_depend>
+
+  <!-- Optional -->
+
+<exec_depend>python3-numpy</exec_depend>
+
+  <!-- Tests -->
+
+<test_depend>ament_lint_auto</test_depend>
+<test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+
+</package>
+

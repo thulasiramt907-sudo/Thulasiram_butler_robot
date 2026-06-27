@@ -1,0 +1,8 @@
+# ConfirmTable Service
+# Called when robot arrives at table, waits for customer to confirm food received
+
+string order_id       # The order being delivered
+int32  table_number   # Which table the robot is at
+---
+bool   confirmed      # True = customer received food, False = timeout / no response
+string message        # Optional message from customer

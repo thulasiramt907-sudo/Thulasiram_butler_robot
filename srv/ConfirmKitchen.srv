@@ -1,0 +1,7 @@
+# ConfirmKitchen Service
+# Called when robot arrives at kitchen, waits for kitchen staff to confirm food is ready
+
+string order_id       # The order robot is collecting
+---
+bool   confirmed      # True = food ready, False = timeout / not ready
+string message        # Optional message from kitchen staff
